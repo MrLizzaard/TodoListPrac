@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background: cornflowerblue;
+  text-align: center;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.header h2 {
+  padding: 10px 0;
+  margin: 0;
+  font-size: 30px;
+}
+
+#Input {
+  width: 50%;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+#Button {
+  background-color: rgb(168, 162, 162);
+  padding: 3px 16px;
+  margin: 0;
+}
+
+#Button:hover {
+  background-color: grey;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+ul {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  margin: 0;
+  padding: 5px 0 5px 30px;
+  background-color: beige;
+  cursor: pointer;
+}
+
+ul li:nth-child(even) {
+  background-color: bisque;
+}
+
+ul li:hover {
+  background-color: grey;
+}
+
+.checked {
+  text-decoration: line-through;
+  background-color: rgb(177, 175, 175);
+}
