@@ -1,7 +1,7 @@
 "use strict";
 
-const lists = document.getElementById("UL").querySelectorAll('li');
-const listlength = lists.length;
+let lists = document.getElementById("UL"); //.querySelectorAll('li')
+let listlength = lists.length;
 const CB = document.getElementsByClassName("closed");
 
 function ClickAdd() {
@@ -23,27 +23,41 @@ function ClickAdd() {
     li.appendChild(closebox);
     ul.appendChild(li);
     textVal.value = "";
-    listlength++;
+    for(let i = 0; i < CB.length; i++){
+      CB[i].onclick = function() {
+        let div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
   }
 }
 
-for(let i =0; i<listlength; i++){
-  lists[i].addEventListener('click', function() {
-    if(lists[i].className == ''){
-      lists[i].className = 'checked';
-    }
-    else{
-      lists[i].className = '';
-    }
-  })
-}
+lists.addEventListener('click', function(event) {
+  if(event.target.className ===''){
+    event.target.className = "checked";
+  }
+  else{
+    event.target.className = '';
+  }
+});
 
-for(let i = 0; i<lists.length; i++){
+// for(let i =0; i<listlength; i++){
+//   lists[i].addEventListener('click', function() {
+//     if(lists[i].className == ''){
+//       lists[i].className = 'checked';
+//     }
+//     else{
+//       lists[i].className = '';
+//     }
+//   })
+// }
+
+for(let i = 0; i<lists.querySelectorAll('li').length; i++){
   let closebox = document.createElement('span');
   let txt = document.createTextNode("\u00D7");
   closebox.className = 'closed';
   closebox.appendChild(txt);
-  lists[i].appendChild(closebox);
+  lists.querySelectorAll('li')[i].appendChild(closebox);
 }
 
 
