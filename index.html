@@ -3,21 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="todo.js"></script>
+    <script defer src="todo.js" defer></script>
+    <script src="clock.js" defer></script>
   </head>
   <body>
     <div class="header">
-      <h2>ToDoList</h2>
-      <input id="Input" type="text" placeholder="type.." />
-      <span id="Button" onclick="ClickAdd()">add</span>
+      <h5 class="js-clock">00:00</h5>
+      <h1>Todo</h1>
+      <form class="js-form form">
+        <input type="text" placeholder="what to do..." />
+      </form>
+      <span class="Btn">ADD</span>
     </div>
-
-    <ul id="UL">
-      <li>js공부하기</li>
-      <li>숨쉬기</li>
-      <li class="checked">투두리스트 만들기</li>
-      <li>스트레칭하기</li>
-      <li>이것저것하기</li>
+    <ul class="js-todo">
+      <li>study</li>
     </ul>
   </body>
 </html>

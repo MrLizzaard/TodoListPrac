@@ -1,74 +1,41 @@
-* {
-  box-sizing: border-box;
+:root {
+  --text-color: #dff9fb;
+  --background-color: #130f40;
 }
 
-body {
-  user-select: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
-  background: cornflowerblue;
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color);
   text-align: center;
-  padding: 0;
-  margin: 0;
+  color: var(--text-color);
+  border-bottom: 1px solid #30336b;
 }
 
-.header h2 {
-  padding: 10px 0;
-  margin: 0;
-  font-size: 30px;
-}
-
-#Input {
-  width: 50%;
-  font-size: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-#Button {
-  background-color: rgb(168, 162, 162);
-  padding: 3px 16px;
-  margin: 0;
-}
-
-#Button:hover {
-  background-color: grey;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-ul li {
-  position: relative;
-  margin: 1px;
-  padding: 12px 8px 12px 40px;
-  background-color: beige;
-  cursor: pointer;
-}
-
-ul li:hover {
-  background-color: grey;
-  transition: 0.2s;
-}
-
-.checked {
-  text-decoration: line-through;
-  background-color: rgb(177, 175, 175);
-}
-
-.closed {
+.js-clock {
   position: absolute;
-  padding: 12px 16px 12px 16px;
-  right: 0;
-  top: 0;
+  padding: 5px;
+  margin: 0px;
+  color: var(--text-color);
 }
 
-.closed:hover {
-  background-color: #f44336;
-  color: white;
+.form {
+  display: inline;
+}
+
+.Btn {
+  cursor: pointer;
+}
+
+.js-todo {
+  list-style-type: none;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
 }
