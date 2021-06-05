@@ -1,62 +1,38 @@
-:root {
-  --text-color: #dff9fb;
-  --background-color: #130f40;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  height: 100vh;
+  background: linear-gradient(#2ecc71, #f39c12);
+}
+
 .header {
-  padding: 0;
-  margin: 0;
-  background-color: var(--background-color);
-  text-align: center;
-  color: var(--text-color);
-}
-
-.js-clock {
-  position: absolute;
-  padding: 5px;
-  margin: 0px;
-  color: var(--text-color);
-}
-
-.form {
-  display: inline;
-}
-
-.Btn {
-  cursor: pointer;
-}
-
-.todo {
-  list-style-type: none;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  width: 100%;
+  padding-top: 20vh;
   text-align: center;
 }
 
-.todo li {
-  position: relative;
-  border-top: 1px solid #30336b;
-  margin: 0;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header h1 {
+  color: #2c3e50;
+  margin-bottom: 50px;
+  font-size: 3rem;
 }
 
-.text {
-  cursor: pointer;
-  padding: 10px;
+.header form {
+  width: 100%;
 }
 
-.del {
-  padding: 10px;
+.header form input {
+  border: none;
+  height: 2rem;
+}
+
+.header form button {
+  border: none;
+  height: 2rem;
+  width: 2.5rem;
   cursor: pointer;
-  position: absolute;
-  right: 0;
 }
